@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sample-app": {
+    "ng-recipes": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sample-app",
+            "outputPath": "dist/ng-recipes",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -59,18 +59,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sample-app:build"
+            "browserTarget": "ng-recipes:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "sample-app:build:production"
+              "browserTarget": "ng-recipes:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sample-app:build"
+            "browserTarget": "ng-recipes:build"
           }
         },
         "test": {
@@ -107,15 +107,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "sample-app:serve"
+            "devServerTarget": "ng-recipes:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "sample-app:serve:production"
+              "devServerTarget": "ng-recipes:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "sample-app"
+  "defaultProject": "ng-recipes"
 }
